@@ -1,3 +1,5 @@
+// It does using the simple fact that factors occurs in pairs!
+
 void solve() {
     int n;
     cin>>n;
