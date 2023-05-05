@@ -7,3 +7,7 @@ bool compare(const pair<int, int>& a, const pair<int, int>& b) {
     }
     return a.first < b.first;
 }
+
+
+vector<pair<int, int>> vec = {{1, 2}, {3, 4}, {1, 1}, {2, 3}};
+sort(vec.begin(), vec.end(), compare);
