@@ -7,9 +7,9 @@ void solve() {
     vector<int> v1;
 
     for(int i=1;i*i<=n;i++){
-      if(!(n%i)){
+      if(n%i==0){
         v1.push_back(i);
-        if (i != n/i) 
+        if (n/i != i) 
             v1.push_back(n/i);
       }
     }
