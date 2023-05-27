@@ -1,3 +1,17 @@
+ // if vertices are labeled from 1 to N, then we make following changes
+        DSU(int N)
+    {
+        father = vector<int>(N+1);    
+        size = vector<int>(N+1, 1);
+        components = N;
+        maxComponentSize = 1;
+        for (int i = 1; i <= N; i++)
+        {
+            father[i] = i;
+        }
+    }
+--------------------------------------------------------------------------------------------------
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,7 +24,7 @@ struct DSU
 
     DSU(int N)
     {
-        father = vector<int>(N);
+        father = vector<int>(N);    
         size = vector<int>(N, 1);
         components = N;
         maxComponentSize = 1;
@@ -79,7 +93,9 @@ int main()
 
     return 0;
 }
-
+-------------------------------------------------------------------------------------------------------
+    
+    
 // We can also find the size of component containing node
 int Q;
 cin >> Q;
