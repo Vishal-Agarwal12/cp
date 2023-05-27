@@ -45,12 +45,15 @@ struct DSU
             components--;
         }
     }
-
     int getMaxComponentSize()
     {
         return maxComponentSize;
     }
-
+    int getComponentSize(int node)
+    {
+        int root = find(node);
+        return size[root];
+    }
     int countComponents()
     {
         return components;
@@ -64,7 +67,7 @@ int main()
 
     DSU dsu(N);
 
-    for (int i = 0; i < M ; i++)
+    for (int i = 0; i < M; i++)
     {
         int A, B;
         cin >> A >> B;
@@ -78,11 +81,12 @@ int main()
 }
 
 // We can also find the size of component containing node
-    int Q;
-    cin >> Q;
-    for (int i = 0; i < Q; i++) {
-        int node;
-        cin >> node;
-        int componentSize = dsu.getComponentSize(node);
-        cout << "Size of component containing node " << node << ": " << componentSize << endl;
-    }
+int Q;
+cin >> Q;
+for (int i = 0; i < Q; i++)
+{
+    int node;
+    cin >> node;
+    int componentSize = dsu.getComponentSize(node);
+    cout << "Size of component containing node " << node << ": " << componentSize << endl;
+}
