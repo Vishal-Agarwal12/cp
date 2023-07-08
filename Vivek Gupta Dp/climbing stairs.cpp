@@ -14,6 +14,7 @@ int a[45]={0};
                 int ways  = r(level + step, n);
                 ans += ways;
             }
+            else break;
         }
         return ans;
     }    
