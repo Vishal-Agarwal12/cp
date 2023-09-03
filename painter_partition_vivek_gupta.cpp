@@ -1,6 +1,6 @@
 int check(int mid) {
-    last_painter_time_left = 0;
-    num_of_painter_spawned = 0;
+    ll last_painter_time_left = 0;
+    ll num_of_painter_spawned = 0;
     
     for(int i=0;i<n;i++) {
         if(last_painter_time_left >= arr[i]) {
